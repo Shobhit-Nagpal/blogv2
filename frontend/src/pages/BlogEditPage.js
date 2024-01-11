@@ -1,8 +1,12 @@
 import React from "react";
+import Layout from "../components/Layout";
 
 function BlogEditPage() {
     return (
-        <h1>BlogEditPage</h1>
+        <Layout>
+        <div>
+        </div>
+        </Layout>
     )
 }
 
