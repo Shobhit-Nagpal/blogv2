@@ -33,9 +33,15 @@ function HomePage() {
             <p className="text-center mb-40 text-white text-2xl">There are no posts currently </p> 
             </div>
             </>
-            : posts.map((post) => {
-                <BlogContainer key={post.id} title={post.title} created_at={post.created_at} />
-            }) 
+            : 
+            <div className="flex flex-col gap-10 items-center justify-center">
+            {
+                posts.map((post) => {
+                <BlogContainer className="text-center" key={post.id} id={post.id} title={post.title} created_at={post.created_at} />
+            })
+
+            }
+            </div>
         }
         </Layout>
     )
