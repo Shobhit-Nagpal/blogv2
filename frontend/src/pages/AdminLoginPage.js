@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Navigate } from "react-router-dom";
 import Alert from "../components/Alert";
 import Layout from "../components/Layout";
 import { useAdmin } from "../context/AdminContext";
@@ -49,6 +50,7 @@ function AdminLoginPage() {
                 setToastMessage(data.message);
                 setIsError(false);
                 setIsAdmin(true);
+                return <Navigate to="/dashboard" />
             }
 
 
