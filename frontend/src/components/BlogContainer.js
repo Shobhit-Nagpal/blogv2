@@ -8,9 +8,9 @@ function BlogContainer({id, title, created_at}) {
     }
     
     return (
-        <div className="border-solid border-2 border-grey rounded-md p-5 w-1/6" onClick={() => {handleClick(id)}}>
+        <div className="border-solid border-2 border-grey rounded-md p-5 w-1/5 cursor-pointer bg-black hover:border-white" onClick={() => {handleClick(id)}}>
         <h2 className="text-white text-3xl font-bold">{title}</h2>
-        <p className="text-grey">{created_at}</p>
+        <p className="text-grey mt-3">{created_at}</p>
         </div>
     )
 }

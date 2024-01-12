@@ -6,6 +6,7 @@ import BlogDetailPage from './pages/BlogDetailPage';
 import NotFoundPage from './pages/NotFoundPage';
 import BlogEditPage from './pages/BlogEditPage';
 import AdminLoginPage from './pages/AdminLoginPage';
+import BlogCreatePage from './pages/BlogCreatePage';
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<HomePage />}/>
         <Route path="/dashboard" element={<DashboardPage />}/>
         <Route path="/post/:id" element={<BlogDetailPage />}/>
+        <Route path="/post/create" element={<BlogCreatePage />}/>
         <Route path="/post/edit/:id" element={<BlogEditPage />}/>
         <Route path="/login" element={<AdminLoginPage />}/>
         <Route path="*" element={<NotFoundPage />}/>

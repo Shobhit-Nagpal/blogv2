@@ -1,5 +1,6 @@
+import Cookies from "js-cookie";
 import React, { useState, useEffect } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Alert from "../components/Alert";
 import Layout from "../components/Layout";
 import { useAdmin } from "../context/AdminContext";
@@ -13,6 +14,7 @@ function AdminLoginPage() {
     const [isError, setIsError] = useState(false);
 
     const { setIsAdmin } = useAdmin();
+    const navigate = useNavigate();
 
     async function authenticateAdmin(username, password) {
 
@@ -50,7 +52,9 @@ function AdminLoginPage() {
                 setToastMessage(data.message);
                 setIsError(false);
                 setIsAdmin(true);
-                return <Navigate to="/dashboard" />
+                const token = data.token;
+                Cookies.set("token", token)
+                navigate("/dashboard");
             }
 
 
