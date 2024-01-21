@@ -10,6 +10,10 @@ Some new things I tried:
 - Lottie animations
 - Vercel deployment
 
+Note: Updated code for both frontend and backend are present on individual repos to host them on Vercel.
+Backend: https://github.com/Shobhit-Nagpal/blogv2-backend
+Frontend: https://github.com/Shobhit-Nagpal/blogv2-frontend
+
 # Tech stack
 - React
 - Node
